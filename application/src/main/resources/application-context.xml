@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="launcher" class="Launcher">
+
+    </bean>
+
+    <bean id="integer-calculator" class="calculators.IntegerCalcImpl"/>
+    <bean id="double-calculator" class="calculators.DoubleCalcImpl"/>
+    <bean id="float-calculator" class="calculators.FloatCalcImpl"/>
+    <bean id="long-calculator" class="calculators.LongCalcImpl"/>
+
+    <bean id="calculator" class="Calculator">
+        <property name="calculator" ref="double-calculator"/>
+
+    </bean>
+</beans>
